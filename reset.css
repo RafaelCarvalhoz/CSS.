@@ -1,0 +1,13 @@
+/* reset.css - Modelo Eric Meyer simplificado */
+html, body, div, span, h1, h2, p, a, img, section {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box; /* Garante que padding não quebre o Flexbox */
+}
+body {
+    line-height: 1;
+}
