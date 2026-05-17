@@ -1,0 +1,66 @@
+/* estilo.css - Folha de estilo principal */
+
+/* Configuração do Flexbox para organizar as 3 seções lado a lado */
+#portal-container {
+    display: flex;
+    flex-direction: row;         /* Coloca os itens em linha (colunas) */
+    justify-content: space-between; /* Distribui o espaço igualmente entre as colunas */
+    gap: 20px;                   /* Espaçamento de 20px entre cada seção */
+    flex-wrap: wrap;             /* Se a tela for pequena (celular), as colunas quebram para baixo */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Classe genérica para padronizar o estilo visual de todas as seções */
+.card-secao {
+    flex: 1;                     /* Faz com que as 3 colunas tenham tamanhos perfeitamente iguais */
+    min-width: 280px;            /* Largura mínima para não esmagar o conteúdo em telas menores */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1e1e1e;   /* Fundo cinza escuro para destacar as seções */
+    text-align: center;
+}
+
+/* Padronização dos títulos internos das seções */
+.card-secao h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Padronização dos parágrafos */
+.card-secao p {
+    font-size: 0.95rem;
+    color: #b3b3b3;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Padronização e estilização das Imagens */
+.img-portal {
+    width: 100%;                 /* Ocupa toda a largura interna da seção */
+    max-width: 250px;            /* Impede que a imagem fique gigante */
+    height: 150px;
+    object-fit: cover;           /* Corta a imagem proporcionalmente sem distorcer */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 2px solid transparent;
+    transition: transform 0.3s;  /* Efeito suave ao passar o mouse */
+}
+
+.img-portal:hover {
+    transform: scale(1.05);      /* Efeito de zoom sutil no hover */
+}
+
+/* IDs específicos para dar uma identidade visual (borda/detalhe) para cada seção */
+#secao-filmes {
+    border-top: 5px solid #ff4a4a; /* Detalhe em vermelho (estilo Netflix) */
+}
+
+#secao-musica {
+    border-top: 5px solid #1db954; /* Detalhe em verde (estilo Spotify) */
+}
+
+#secao-games {
+    border-top: 5px solid #00bcff; /* Detalhe em azul (estilo PlayStation/Tech) */
+}
